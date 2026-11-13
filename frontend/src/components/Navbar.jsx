@@ -79,6 +79,18 @@ function Navbar() {
                             </NavLink>
                         </li>
 
+                        <li className="nav-btn">
+                            <NavLink to="/student/dashboard" onClick={closeMenu}>
+                                Student View
+                            </NavLink>
+                        </li>
+
+                        <li className="nav-btn">
+                            <NavLink to="/mentor/dashboard" onClick={closeMenu}>
+                                Mentor View
+                            </NavLink>
+                        </li>
+
                         <li className="btn-log">
                             <a
                                 href="#"

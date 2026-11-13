@@ -161,13 +161,13 @@ export default function ProfileTab({
           console.error("Supabase Auth error:", authError.message);
         }
 
-        const authEmail = user?.email || "";
+        const authEmail = user?.email || "dhinesh.student@kalvium.community";
         const authName =
           user?.user_metadata?.full_name ||
           user?.user_metadata?.name ||
           user?.user_metadata?.display_name ||
-          (authEmail ? authEmail.split("@")[0] : "Student");
-        const authUserId = user?.id || "N/A";
+          "Dhinesh Babu";
+        const authUserId = user?.id || "KLV-2026-042";
 
         let apiData = {};
         if (profileData && Object.keys(profileData).length > 0) {
@@ -182,14 +182,19 @@ export default function ProfileTab({
         }
 
         const mergedProfile = {
+          title: "Full Stack Engineer & Mentor",
+          bio: "Passionate developer exploring modern web technologies, competitive programming, and scalable architectures.",
+          github: "https://github.com/dhinesh-babu-7",
+          linkedin: "https://linkedin.com/in/dhinesh-babu",
+          leetcode: "https://leetcode.com/u/dhinesh-babu-7",
           ...apiData,
           auth_id: authUserId,
           display_id: authUserId,
           name: authName,
           kalvium_email: authEmail,
           kalviumEmail: authEmail,
-          squad_id: apiData?.squad_id ?? apiData?.squadId ?? "",
-          squadId: apiData?.squad_id ?? apiData?.squadId ?? "",
+          squad_id: apiData?.squad_id ?? apiData?.squadId ?? "42",
+          squadId: apiData?.squad_id ?? apiData?.squadId ?? "42",
         };
 
         if (isMounted) {

@@ -165,6 +165,46 @@ export default function LoginPage() {
                             Continue With Google
                         </button>
 
+                        <div style={{ margin: "16px 0 8px", width: "100%", display: "flex", flexDirection: "column", gap: "10px" }}>
+                            <div style={{ textAlign: "center", fontSize: "12px", color: "#64748b", textTransform: "uppercase", letterSpacing: "0.5px" }}>
+                                — or explore directly —
+                            </div>
+                            <Link
+                                to="/student/dashboard"
+                                style={{
+                                    display: "block",
+                                    padding: "10px 14px",
+                                    backgroundColor: "#f0fdf4",
+                                    color: "#166534",
+                                    border: "1px solid #bbf7d0",
+                                    borderRadius: "8px",
+                                    textAlign: "center",
+                                    fontWeight: "600",
+                                    fontSize: "14px",
+                                    textDecoration: "none"
+                                }}
+                            >
+                                🎓 Enter Student Dashboard (Skip Login)
+                            </Link>
+                            <Link
+                                to="/mentor/dashboard"
+                                style={{
+                                    display: "block",
+                                    padding: "10px 14px",
+                                    backgroundColor: "#eff6ff",
+                                    color: "#1e40af",
+                                    border: "1px solid #bfdbfe",
+                                    borderRadius: "8px",
+                                    textAlign: "center",
+                                    fontWeight: "600",
+                                    fontSize: "14px",
+                                    textDecoration: "none"
+                                }}
+                            >
+                                👨‍🏫 Enter Mentor Dashboard (Skip Login)
+                            </Link>
+                        </div>
+
                         <Link
                             to="/"
                             className="back-home-btn"
